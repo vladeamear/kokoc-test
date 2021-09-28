@@ -82,72 +82,67 @@
     box-shadow: 4px 4px 0px 0px #E5E5E5;
     -webkit-box-shadow: 4px 4px 0px 0px #E5E5E5;
     -moz-box-shadow: 4px 4px 0px 0px #E5E5E5;
+    transition-duration: .4s;
+}
+.home-right span:hover{
+    box-shadow: 4px 4px 0px 0px #bdbdbd;
+    -webkit-box-shadow: 4px 4px 0px 0px #bdbdbd;
+    -moz-box-shadow: 4px 4px 0px 0px #bdbdbd;
+    transition-duration: .4s;
 }
 .home-right .php{
     background: #8170C5;
     top: 104px;
     left: 0;
-    transition-duration: .4s;
 }
 .home-right .php:hover{
     top: 102px;
     left: -7px;
-    transition-duration: .4s;
 }
 .home-right .js{
     background: #D75347;
     top: 0;
     left: 26px;
-    transition-duration: .4s;
 }
 .home-right .js:hover{
     top: -4px;
     left: 20px;
-    transition-duration: .4s;
 }
 .home-right .xml{
     background: #FFB420;
     top: 62px;
     left: 166px;
-    transition-duration: .4s;
 }
 .home-right .xml:hover{
     top: 55px;
     left: 164px;
-    transition-duration: .4s;
 }
 .home-right .html{
     background: #4267C5;
     top: 10px;
     left: 252px;
-    transition-duration: .4s;
 }
 .home-right .html:hover{
     top: 6px;
     left: 255px;
-    transition-duration: .4s;
 }
 .home-right .sql{
     background: #66B659;
     top: 71px;
     left: 328px;
-    transition-duration: .4s;
 }
 .home-right .sql:hover{
     top: 66px;
     left: 334px;
-    transition-duration: .4s;
 }
 .home-right .css{
     background: #FF66A8;
     top: 123px;
     left: 429px;
-    transition-duration: .4s;
 }
 .home-right .css:hover{
     top: 121px;
     left: 436px;    
-    transition-duration: .4s;
 }
 
 /* about */
@@ -164,6 +159,142 @@
 .about-left{
     width: 560px;
 }
+.about-left span{
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: #D75347;
+    font-weight: 800;
+}
+.about-left h2{
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+.about-left p{
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+.about-left p:last-child{
+    margin-top: 40px;
+}
+
 .about-right{
     width: 460px;
+}
+.about-right .card p{
+    margin: 0;
+    font-size: 16px;
+    line-height: 150%;
+}
+.about-right .card h3{
+    font-size: 22px;
+    line-height: 140%;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.about-right .card{
+    margin-bottom: 20px;
+}
+.about-right .card:last-child{
+    margin-bottom: 0;
+}
+
+/* footer */
+.footer{
+    height: 321px;
+    background-color: #373737;
+}
+.footer .section{
+    height: 196px;
+    padding-top: 75px;
+}
+.footer_inner{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+.footer a{
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    transition-duration: .2s;
+}
+.footer a:hover{
+    color: #D75347;
+    transition-duration: .2s;
+}
+.footer-left{
+    width: 219px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.logo-bottom{
+    background: url('./img/Logo-B.svg');
+    width: 194px;
+    height: 57px;
+}
+.footer-medium{
+    margin-left: 140px;
+    width: 416px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer-links{
+    margin-top: 20px;
+}
+.footer-links a{
+    margin-right: 40px;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: 0.7px;
+}
+.footer-links a:last-child{
+    margin-right: 0;
+}
+.company-link{
+    margin-left: 95px;
+    text-transform: uppercase;
+}
+.footer-right{
+    /* display: flex; */
+    margin-left: 125px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.footer-right p{
+    margin: 0;
+    margin-top: 5px;
+}
+.socials {
+    margin-top: 10px;
+    display: flex;
+}
+.socials a{
+    margin-right: 15px;
+}
+.socials a div{
+    transition-duration: .2s;
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+}
+.socials a div:hover{
+    opacity: 0.5;
+    transition-duration: .2s;
+}
+.socials a:last-child{
+    margin-right: 0;
+}
+.instagram{
+    background: url('./img/IG.svg');
+}
+.telegram{
+    background: url('./img/TG.svg');
+}
+.facebook{
+    background: url('./img/FB.svg');
 }
