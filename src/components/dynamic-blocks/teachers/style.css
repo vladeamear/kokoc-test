@@ -1,0 +1,33 @@
+#teachers .card{
+    width: 360px;
+    border-radius: 0 0 6px 6px;
+    padding-bottom: 22px;
+}
+
+#teachers .card p{
+    margin: 0 20px;
+}
+#teachers .card h3{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.avatar{
+    width: 100%;
+    height: 354px;
+    margin-bottom: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.man0{
+    background-image: url('../img/man0.jpg');
+}
+.man1{
+    background-image: url('../img/man1.png');
+}
+.man2{
+    background-image: url('../img/man2.png');
+}
+.man3{
+    background-image: url('../img/man3.png');
+}
