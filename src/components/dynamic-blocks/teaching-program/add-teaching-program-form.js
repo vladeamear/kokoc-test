@@ -1,43 +1,89 @@
-import React, {Component} from 'react';
+import React from 'react';
+import { Formik, Form } from 'formik';
 import './style.css';
 
-export default class AddTeachingProgramForm extends Component {
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-    constructor(props){
-        super(props);
-        this.eventNSName = this.eventNSName.bind(this);
-        this.eventNSTask = this.eventNSTask.bind(this);
-        this.onFormSubmit = this.onFormSubmit.bind(this);
-        this.state={
-            newStageName: '',
-            newStageTask: ''
-        };
+const validate = values => {
+    let errors = {}
+
+    if(!values.stagePic){
+        errors.stagePic = 'Обязательное поле'
     }
 
-    eventNSName(event) {
-        this.setState({ newStageName: event.target.value })
-    }
-    eventNSTask(event) {
-        this.setState({ newStageTask: event.target.value })
-    }
-    onFormSubmit(event) {
-        event.preventDefault();
-        let stages = localStorage.getItem('stages') ? JSON.parse(localStorage.getItem('stages')) : [];
-        stages = [...stages, this.state]
-        localStorage.setItem('stages', JSON.stringify(stages));
+    if(!values.stageName){
+        errors.stageName = 'Обязательное поле'
     }
 
-    render(){
-        return(
-            <form onSubmit={this.onFormSubmit}>
-                <fieldset className="inputs">
-                    <input type="text" placeholder="Название" value={this.state.newStageName} onChange={this.eventNSName} />
-                    <input type="text" placeholder="Задача курса" value={this.state.newStageTask} onChange={this.eventNSTask} />
-                </fieldset>
-                <fieldset>
-                    <button type="submit">Добавить этап</button>
-                </fieldset>
-            </form>
-        );
+    if(!values.stageDescription){
+        errors.stageDescription = 'Обязательное поле'
     }
+
+    return errors
 }
+
+const AddTeachingProgramForm = () => (
+<div style={{width: '762px'}}>
+    <Formik
+        initialValues={{
+            stagePic: '',
+            stageName: '',
+            stageDescription: '',
+            errors: {}
+        }}
+        onSubmit={async (values, {resetForm}) => {
+            values.errors = {}
+            await sleep(500);
+            if (Object.keys(validate(values)).length){
+                values.errors = validate(values)
+            }else{
+                let stages = localStorage.getItem('stages') ? JSON.parse(localStorage.getItem('stages')) : [];
+                stages = [...stages, values]
+                localStorage.setItem('stages', JSON.stringify(stages, null, 2));
+                localStorage.setItem('message', 'Этап программы добавлена, закройте окно')
+                resetForm()
+            };
+            
+        }}
+    >
+    {({ values, handleChange }) => (
+        <Form>
+            <fieldset className="inputs">
+                <div className="input-wrapper">
+                    <input type="number" placeholder="№ картинки (1-4)" name="stagePic"
+                        min="1"
+                        max="4"
+                        value={values.stagePic}
+                        onChange={handleChange} />
+                    <label>{values.errors.stagePic}</label>
+                </div>
+                <div className="input-wrapper">
+                    <input type="text" placeholder="Название" name="stageName"
+                        value={values.stageName}
+                        onChange={handleChange} />
+                    <label>{values.errors.stageName}</label>
+                </div>
+                <div className="input-wrapper">
+                    <input type="text" placeholder="Описание" name="stageDescription"
+                        value={values.stageDescription}
+                        onChange={handleChange}/>
+                    <label>{values.errors.stageDescription}</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <button type="submit">Добавить программу</button>
+                <p
+                    className={
+                        localStorage.getItem('message')
+                        ? "message a"
+                        : "message"
+                    }
+                    dangerouslySetInnerHTML={{__html: localStorage.getItem('message')}} />
+            </fieldset>
+            </Form>
+        )}
+        </Formik>
+    </div>
+);
+
+export default AddTeachingProgramForm

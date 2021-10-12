@@ -148,7 +148,7 @@ fieldset button{
     flex-wrap: wrap;
     flex-direction: row;
 }
-input[type="text"]{
+input[type="text"], input[type="number"]{
     width: 308px;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.06);
@@ -156,7 +156,7 @@ input[type="text"]{
     padding: 10px 15px;
     font-size: 22px;
 }
-input[type="text"]:focus{
+input[type="text"]:focus, input[type="number"]:focus{
     border: 1px solid rgba(0, 0, 0, 1);
     outline: none;
 }
@@ -291,6 +291,28 @@ form p{
     width: -webkit-fill-available;
     margin: 2px;
     border-radius: 6px;
+}
+.input-wrapper label{
+    display: block;
+    font-size: 16px;
+    color: #D75347;
+}
+.message{
+    display: flex;
+    color: #fff;
+    opacity: 1;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffb420;
+    height: 0;
+    overflow: hidden;
+    transition-duration: .2s;
+}
+.message.a{
+    height: 150px;
 }
 
 #teachers-anchor, #about-anchor, #teaching-program-anchor{

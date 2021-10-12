@@ -1,24 +1,20 @@
 import React, {useState} from 'react';
 import './style.css';
-import pc0 from '../img/computers0.png'
-import pc1 from '../img/computers1.png'
-import pc2 from '../img/computers2.png'
-import pc3 from '../img/computers3.png'
 import certificate from '../img/certificate.png'
 import Modal from '../modal-window/modal.js'
 import AddTeachingProgramForm from './add-teaching-program-form.js'
-import RequestForm from '../request-form/request-form.js'
-import { RequstForm } from '..';
+import DeleteTeachingProgramForm from './delete-teaching-program-form.js'
+import RequestForm from '../request-form/request-form.js';
 
-let NewStages = () => ({
+let Stages = () => ({
     render: function(){
-        let newstages = JSON.parse(localStorage.getItem('stages'));
-        if (newstages) {
-            let listofstages = newstages.map(function(obj){
+        let stages = JSON.parse(localStorage.getItem('stages'));
+        if (stages) {
+            let listofstages = stages.map(function(obj){
                 return <div className="card p-20">
-                    <img src={pc0} />
-                    <h3>{obj.newStageName}</h3>
-                    <p>Задача курса: {obj.newStageTask}</p>
+                    <div className={`pc pc${(obj.stagePic).toString()}`} />
+                    <h3 dangerouslySetInnerHTML={{__html: obj.stageName}} />
+                    <p dangerouslySetInnerHTML={{__html: 'Задача курса: ' + obj.stageDescription}} />
                 </div>
             })
             return <>{listofstages}</>
@@ -44,24 +40,13 @@ const TeachingProgram = () => {
                     <button className="c-r b-w" onClick={() => {
                         setModalActive(true)
                         inner = <AddTeachingProgramForm />}}>+</button>
+                    &nbsp;&nbsp;&nbsp;
+                    <button className="c-r b-w" onClick={() => {
+                        setModalActive(true)
+                        inner = <DeleteTeachingProgramForm />}}>-</button>
                 </div>
                 <div className="d-f g-20 c-b">
-                    <div className="card p-20">
-                        <img src={pc1} />
-                        <h3>Домены, сайты,<br />поисковые системы</h3>
-                        <p>Задача курса: понять как работают сайты; понять какие есть варианты создания сайтов и их публикации в сети</p>
-                    </div>
-                    <div className="card p-20">
-                        <img src={pc2} />
-                        <h3>Создание статичного<br />сайта</h3>
-                        <p>Задача курса: научиться делать статичные Html-страницы (верстать блоки) с помощью современной IDE</p>
-                    </div>
-                    <div className="card p-20">
-                        <img src={pc3} />
-                        <h3>Создание динамического<br />сайта</h3>
-                        <p>Задача курса: научиться делать бекенд разработку - php и mysql</p>
-                    </div>
-                    <NewStages></NewStages>
+                    <Stages></Stages>
                 </div>
                 <div className="d-f g-40 mt-50 mb-50">
                     <div className="f-1">
@@ -84,7 +69,7 @@ const TeachingProgram = () => {
                 <div className="d-f jc-c">
                     <button className="b-w c-r" onClick={() => {
                         setModalActive(true)
-                        inner = <RequstForm />
+                        inner = <RequestForm />
                         console.log(inner)}}>Оставить заявку</button>
                 </div>
             </section>

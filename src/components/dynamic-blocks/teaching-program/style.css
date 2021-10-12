@@ -1,3 +1,21 @@
 #teaching-program .card{
     width: 333px;
 }
+.pc{
+    height: 149px;
+    width: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 5px;
+}
+.pc1{
+    background-image: url('../img/computers0.png');
+}
+.pc2{
+    background-image: url('../img/computers1.png');
+}
+.pc3{
+    background-image: url('../img/computers2.png');
+}
+.pc4{
+    background-image: url('../img/computers3.png');
+}
