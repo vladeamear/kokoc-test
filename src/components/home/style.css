@@ -1,0 +1,102 @@
+.home{
+    margin-top: 100px;
+    display: flex;
+}
+.home section{
+    display: flex;
+    justify-content: space-between;
+    padding: 75px 0;
+}
+.home__left-part{
+    width: 605px;
+}
+.home__left-part p{
+    width: 488px;
+    margin-bottom: 50px;
+}
+.home__right-part{
+    position: relative;
+    height: 492px;
+    width: 500px;
+}
+.home__right-part img, .home__right-part span{
+    position: absolute;
+}
+.home__right-part img{
+    top: 119px;
+    left: 28px;
+}
+.home__right-part span{
+    cursor: default;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 28px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    box-shadow: 4px 4px 0px 0px #E5E5E5;
+    -webkit-box-shadow: 4px 4px 0px 0px #E5E5E5;
+    -moz-box-shadow: 4px 4px 0px 0px #E5E5E5;
+    transition-duration: .4s;
+}
+.home__right-part span:hover{
+    box-shadow: 4px 4px 0px 0px #bdbdbd;
+    -webkit-box-shadow: 4px 4px 0px 0px #bdbdbd;
+    -moz-box-shadow: 4px 4px 0px 0px #bdbdbd;
+    transition-duration: .4s;
+}
+.home__php{
+    background: #8170C5;
+    top: 104px;
+    left: 0;
+}
+.home__php:hover{
+    top: 102px;
+    left: -7px;
+}
+.home__js{
+    background: #D75347;
+    top: 0;
+    left: 26px;
+}
+.home__js:hover{
+    top: -4px;
+    left: 20px;
+}
+.home__xml{
+    background: #FFB420;
+    top: 62px;
+    left: 166px;
+}
+.home__xml:hover{
+    top: 55px;
+    left: 164px;
+}
+.home__html{
+    background: #4267C5;
+    top: 10px;
+    left: 252px;
+}
+.home__html:hover{
+    top: 6px;
+    left: 255px;
+}
+.home__sql{
+    background: #66B659;
+    top: 71px;
+    left: 328px;
+}
+.home__sql:hover{
+    top: 66px;
+    left: 334px;
+}
+.home__css{
+    background: #FF66A8;
+    top: 123px;
+    left: 429px;
+}
+.home__css:hover{
+    top: 121px;
+    left: 436px;    
+}

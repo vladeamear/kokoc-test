@@ -1,0 +1,14 @@
+.request-section section{
+    display: flex;
+    flex-direction: column;
+    padding: 75px 0;
+}
+.request-section h2{
+    margin-bottom: 50px;
+    text-align: center;
+    width: 100%;
+}
+.request-section__request-form-wrapper{
+    display: flex;
+    justify-content: center;
+}

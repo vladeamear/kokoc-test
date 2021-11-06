@@ -1,11 +1,6 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap'); */
-@font-face {
+@font-face{
     font-family: 'Raleway';
-    src: url(./components/font/Raleway-Medium.ttf);
-}
-@font-face {
-    font-family: 'RalewayBlack';
-    src: url(./components/font/Raleway-Black.ttf);
+    src: url(./font/Raleway-Medium.ttf);
 }
 body{
     min-width: 1160px;
@@ -14,7 +9,7 @@ body{
     font-family: 'Raleway';
     -webkit-font-smoothing: antialiased;
 }
-html {
+html{
     scroll-behavior: smooth;
 }
 
@@ -30,7 +25,6 @@ a:hover{
     color: #D75347;
     transition-duration: .12s;
 }
-
 button{
     border: none;
     border-radius: 6px;
@@ -75,14 +69,12 @@ h3{
     margin-top: 0;
     margin-bottom: 10px;
 }
-
 p, li, label{
     font-weight: 500;
     font-size: 22px;
     line-height: 140%;
     margin: 0;
 }
-
 ul{
     list-style-position: outside;
     padding-left: 22px;
@@ -94,13 +86,13 @@ li{
 li:last-child{
     margin-bottom: 0;
 }
-
 section{
     width: 1160px;
     margin: auto;
     height: 100%;
 }
 
+/* card */
 .card{
     background-color: #fff;
     border-radius: 6px;
@@ -117,6 +109,7 @@ section{
     line-height: 150%;
 }
 
+/* form */
 form{
     padding: 30px;
     background: #F9F9F9;
@@ -148,6 +141,11 @@ fieldset button{
     flex-wrap: wrap;
     flex-direction: row;
 }
+.input-wrapper label{
+    display: block;
+    font-size: 16px;
+    color: #D75347;
+}
 input[type="text"], input[type="number"]{
     width: 308px;
     background: #FFFFFF;
@@ -160,19 +158,18 @@ input[type="text"]:focus, input[type="number"]:focus{
     border: 1px solid rgba(0, 0, 0, 1);
     outline: none;
 }
-
 input[type="checkbox"]{
     position: absolute;
     z-index: -1;
     opacity: 0;
 }
-.cb {
+.checkbox{
     display: inline-flex;
     align-items: center;
     user-select: none;
     margin-right: 30px;
 }
-.cb::before {
+.checkbox::before{
     content: '';
     background: #fff;
     display: inline-block;
@@ -194,109 +191,6 @@ form p{
     color: #373737;
     opacity: 0.6;
 }
-
-.p-20{
-    padding: 20px;
-}
-.pt-75{
-    padding-top: 75px;
-}
-.pb-50{
-    padding-bottom: 50px;
-}
-.pb-75{
-    padding-bottom: 75px;
-}
-.mt-10{
-    margin-top: 10px;
-}
-.mt-20{
-    margin-top: 20px;
-}
-.mt-50{
-    margin-top: 50px;
-}
-.mb-30{
-    margin-bottom: 30px;
-}
-.mb-50{
-    margin-bottom: 50px;
-}
-.d-f{
-    display: flex;
-    flex-wrap: wrap;
-}
-.g-20{
-    gap: 20px;
-}
-.g-40{
-    gap: 40px
-}
-.c-b{
-    color: black;
-}
-.c-w{
-    color: white;
-}
-.c-r{
-    color: #D75347;
-}
-.b-b{
-    background: #373737;
-}
-.b-w{
-    background: #FFF;
-}
-.b-r{
-    background: #D75347;
-}
-.b-f9f9f9{
-    background: #F9F9F9;
-}
-.fd-c{
-    flex-direction: column;
-}
-.ac-sb{
-    align-content: space-between;
-}
-.jc-sb{
-    justify-content: space-between;
-}
-.jc-c{
-    justify-content: center;
-}
-.ai-c{
-    align-items: center;
-}
-.ta-c{
-    text-align: center;
-}
-.f-1{
-    flex: 1;
-}
-.w-100{
-    width: 100%;
-}
-.h-100{
-    height: 100%;
-}
-.img-wrapper{
-    height: 250px;
-    background-color: black;
-    width: fit-content;
-    border-radius: 6px;
-}
-.img-wrapper img{
-    height: -webkit-fill-available;
-    width: -webkit-fill-available;
-    margin: 2px;
-    border-radius: 6px;
-}
-.input-wrapper label{
-    display: block;
-    font-size: 16px;
-    color: #D75347;
-}
 .message{
     display: flex;
     color: #fff;
@@ -315,7 +209,16 @@ form p{
     height: 150px;
 }
 
-#teachers-anchor, #about-anchor, #teaching-program-anchor{
-    position: relative;
-    top: -90px;
+/* image wrapper */
+.img-wrapper{
+    height: 250px;
+    background-color: black;
+    width: fit-content;
+    border-radius: 6px;
+}
+.img-wrapper img{
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    margin: 2px;
+    border-radius: 6px;
 }

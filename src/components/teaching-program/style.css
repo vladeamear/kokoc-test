@@ -1,0 +1,66 @@
+#teaching-program-anchor{
+    position: relative;
+    top: -90px;
+}
+.teaching-program{
+    background: #D75347;
+}
+.teaching-program section{
+    padding: 75px 0;
+}
+.teaching-program__header{
+    color: #FFF;
+    display: flex;
+    margin-bottom: 50px;
+}
+.teaching-program__header button{
+    color: #D75347;
+    background-color: #FFF;
+}
+.teaching-program__stages{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card-teaching-program{
+    padding: 20px;
+    width: 333px;
+}
+.teaching-program__description{
+    color: #FFF;
+    display: flex;
+    gap: 40px;
+    margin: 50px 0;
+}
+.teaching-program__description_column{
+    flex: 1;
+}
+.teaching-program__description_column .img-wrapper{
+    margin-top: 30px;
+}
+.teaching-program__button_wrapper{
+    display: flex;
+    justify-content: center;
+}
+.teaching-program__button_wrapper button{
+    color: #D75347;
+    background-color: #FFF;
+}
+.pc{
+    height: 149px;
+    width: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 5px;
+}
+.pc1{
+    background-image: url('../../img/computers/computers0.png');
+}
+.pc2{
+    background-image: url('../../img/computers/computers1.png');
+}
+.pc3{
+    background-image: url('../../img/computers/computers2.png');
+}
+.pc4{
+    background-image: url('../../img/computers/computers3.png');
+}

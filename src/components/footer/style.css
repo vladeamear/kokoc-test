@@ -1,0 +1,72 @@
+.footer{
+    height: 321px;
+    background-color: #373737;
+}
+.footer section{
+    color: #FFF;
+    height: 196px;
+    padding: 75px 0 50px 0;
+    display: flex;
+}
+.footer a{
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    transition-duration: .2s;
+}
+.footer a:hover{
+    color: #D75347;
+    transition-duration: .2s;
+}
+.footer p{
+    margin: 0;
+    margin-top: 5px;
+}
+.footer h3{
+    padding-top: 20px;
+    display: inline-block;
+    margin-bottom: 0;
+}
+.footer__side{
+    width: 219px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer__mid-part{
+    display: flex;
+    flex: 1;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.logo-bottom{
+    background: url('../../img/kokoc-logo/Logo-B.svg');
+    width: 194px;
+    height: 57px;
+}
+.socials {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+.socials a div{
+    transition-duration: .2s;
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+}
+.socials a div:hover{
+    opacity: 0.5;
+    transition-duration: .2s;
+}
+.instagram{
+    background: url('../../img/social-networks/IG.svg');
+}
+.telegram{
+    background: url('../../img/social-networks/TG.svg');
+}
+.facebook{
+    background: url('../../img/social-networks/FB.svg');
+}
